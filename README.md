@@ -1,8 +1,6 @@
 # Llamakit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/llamakit`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Library containing common code needed to create lessonly apps.
 
 ## Installation
 
@@ -22,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem has fully compliant [YARD](https://yardoc.org/) documentation! Check it out by cloning the repo
+then running `$ yard server --reload` in the top level directory. Here is a list of some things this gem
+can do:
+
+### Create a [Demux](https://github.com/lessonly/demux) record from a rack request:
+```ruby
+request = get_request_somehow()
+signal = Llamakit::Signal.from_request request
+signal.name #=> "lesson_available"
+```
 
 ## Development
 
@@ -32,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/llamakit. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/llamakit/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/lessonly/llamakit. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/llamakit/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
