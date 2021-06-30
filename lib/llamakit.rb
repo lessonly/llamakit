@@ -4,7 +4,13 @@ require_relative "llamakit/version"
 require_relative "llamakit/signal"
 
 # Llamakit does a bunch of cool stuff
-# TODO: explain the cool stuff
+#
+# It can create Demux signals for you!
+#
+# @example creating a Demux signal from a rack request
+#   request = get_request_somehow()
+#   signal = Llamakit::Signal.from_request request
+#   signal.name #=> "lesson_available"
 module Llamakit
   class Error < StandardError; end
 

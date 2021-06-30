@@ -39,6 +39,6 @@ class LlamakitSignalTest < Minitest::Test
       assert_equal signal.signature, "$up3r_$3cR3t"
       assert_equal signal.body, "lemonade was a popular drink and it still is"
     end
+    # rubocop:enable Metrics/MethodLength
   end
-  # rubocop:enable Metrics/MethodLength
 end
